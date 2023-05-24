@@ -1,0 +1,40 @@
+<meta charset="UTF-8">
+
+<input/>
+<button>Chute um número entre 1 e 5</button>
+
+<script>
+    var segredo = 5;
+
+    var input = document.querySelector("input");
+    input.focus();
+
+    function verifica() {
+
+        if(input.value == segredo) {
+
+        alert("Você ACERTOU!");
+        } else {
+
+        alert("Você ERROU!!!!!!!!");
+        }
+
+        input.value = "";
+        input.focus();
+
+    }
+
+            document.addEventListener("keypress", function(e){
+
+        if (e.key === "Enter"){
+            //console.log("Apertou o enter");
+            const button = document.querySelector("button");
+            button.click();
+        }
+    })
+
+    var button = document.querySelector("button");
+
+    button.onclick = verifica;
+
+</script>
